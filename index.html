@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="utama">
+<center>
+<h1>My calculator</h1>
+<br> <br> <br>
+
+
+<input name="number1" type="text" id='angka1' placeholder="Angka pertama" />
+<input name="number2" type="text" id='angka2' placeholder="Angka kedua" />
+<br> <br>
+<input type="text" id='result' placeholder="Hasil">
+<br> <br>
+<button onclick="hasil('tambah')">+</button>
+<button onclick="hasil('kurang')">-</button>
+<button onclick="hasil('kali')">*</button>
+<button onclick="hasil('bagi')">/</button>
+<button onclick="hasil('mod')">%</button>
+
+</div>
+</center>
+<script>
+function hasil(operasi){
+var n1=parseInt(document.querySelector('#angka1').value);
+var n2=parseInt(document.querySelector('#angka2').value);
+var x=operasi;
+var res;
+
+switch(x)
+	{
+	case 'tambah':
+		res=n1+n2;
+		break;
+	case 'kurang':
+		res=n1-n2;
+		break;
+	case 'kali':
+		res=n1*n2;
+		break;
+	case 'bagi': 
+		res=n1/n2;
+		break;
+	case 'mod':
+		res=n1%n2;
+		break;
+	default:
+		break;
+			
+	}
+document.querySelector('#result').value=res;
+}
+</script>
+</body>
+</html>
